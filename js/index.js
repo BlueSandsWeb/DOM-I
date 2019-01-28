@@ -42,10 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // ======= NAV Section ======= //
+const nav = document.querySelector('nav');
+const newNav1 = document.createElement('a');
+newNav1.textContent = "page1";
+newNav1.style.color = "green";
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = "page2";
+newNav2.style.color = "green";
+
 const navA = document.querySelectorAll("nav a");
+
+nav.append(newNav1);
+nav.append(newNav2);
+
 navA.forEach((el, i) => {
   navA[i].textContent = siteContent.nav[`nav-item-${i}`];
-})
+  navA[i].style.color = 'green';
+});
 
 
 // ======= CTA Section ======= //
